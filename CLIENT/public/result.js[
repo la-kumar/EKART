@@ -1,0 +1,8 @@
+result {
+	
+}
+
+var londDescId = result.ld.split(",");
+for(var i in longDescId){
+	{{longDescId[i]}}
+}

@@ -1,0 +1,39 @@
+
+   <div class="row" ng-controller='homeCtrl' ng-init="allData()">
+    <div class="col-sm-12" style="background-color:lavenderblush;">
+        <ul list-style-type = none>
+            <li  ng-model='dataList1' ng-repeat='data1 in dataList1'>
+                       <div class="card" style="width: 40rem;">
+                            <img class="card-img-top" src="{{data1.image}}" alt="mobile image" height=150px width = 100px >
+                            <div class="card-block">
+                                <h4 class="card-title">{{data1.name}}</h4>
+                                <p class="card-text">{{data1.category}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush" float="right">
+                               <li class="list-group-item">{{data1.sd}}</li>
+                               <li class="list-group-item">{{data1.cost}}</li>
+                            </ul>
+                             <div class="card-block">
+                                 <input type="button" name="description" ng-model=data1.id ng-click="seeDescriptionMobile(data1.id)" value="DESCRIPTION" />
+                              </div>
+                        </div>           
+            </li>
+             <li  ng-model='dataList2' ng-repeat='data2 in dataList2'>
+                       <div class="card" style="width: 40rem;">
+                            <img class="card-img-top" src="{{data2.image}}" alt="laptop image" height=100px width = 150px >
+                            <div class="card-block">
+                                <h4 class="card-title">{{data2.name}}</h4>
+                                <p class="card-text">{{data2.category}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush" float="right">
+                               <li class="list-group-item">{{data2.sd}}</li>
+                               <li class="list-group-item">{{data2.cost}}</li>
+                            </ul>
+                             <div class="card-block">
+                                 <input type="button" name="description" ng-model=data2.id ng-click="seeDescriptionLaptop(data2.id)" value="DESCRIPTION" />
+                             </div>
+                        </div>           
+            </li>
+        </ul>
+    </div>
+  </div>

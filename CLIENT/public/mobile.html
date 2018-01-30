@@ -1,0 +1,26 @@
+ <div class="row" ng-controller='mobileCtrl' ng-init="allMobile()">
+    <div class="col-sm-2" style="background-color:lavender;">
+    	<input type="range" min="5000" max="60000" value="50000" ng-model='slider' ng-mouseup='priceFilter()'>
+        <p ng-model='slider'>MAX PRICE : {{slider}}</p>
+    </div>
+    <div class="col-sm-10" style="background-color:lavenderblush;">
+    	<ul list-style-type = none>
+            <li ng-model='dataList' ng-repeat='data in dataList'>
+                       <div class="card" style="width: 40rem;">
+                            <img class="card-img-top" src="{{data.image}}" alt="mobile image" height=150px width = 100px >
+
+                                <h4 class="card-title">{{data.name}}</h4>
+                                <p class="card-text">{{data.category}}</p>
+                           
+                            <ul class="list-group list-group-flush" float="right">
+                               <li class="list-group-item">{{data.sd}}</li>
+                               <li class="list-group-item">{{data.cost}}</li>
+                            </ul>
+                       <div class="card-block">
+                        <input type="button" name="description" ng-model=data.id ng-click="seeDescription(data.id)" value="DESCRIPTION" /> <br/>
+                        </div>
+                        </div>           
+            </li>
+        </ul>
+    </div>
+  </div>

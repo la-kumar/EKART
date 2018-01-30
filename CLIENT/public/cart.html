@@ -1,0 +1,15 @@
+ <div class="row" ng-controller='cartCtrl' ng-init="cartData()">
+    <div class="col-sm-12" style="background-color:lavenderblush;">
+    	<ul list-style-type = none>
+            <li ng-model='dataList' ng-repeat='data in dataList'>
+                               <img src="{{data.image}}" alt="item in cart" height=100px width=100px>
+                               {{data.name}} <br/>
+                               PRICE : {{data.cost}}
+                               <input type="button" name="description" ng-model=data.id ng-click="removeFromCart(data.id)" value="Remove" />
+            </li>
+        </ul>
+        <div ng-model='value'>
+        TOTAL CART VALUE = {{value}}
+        </div>
+    </div>
+  </div>

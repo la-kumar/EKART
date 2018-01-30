@@ -1,0 +1,19 @@
+<div ng-controller ='mobileDescriptionCtrl' ng-init='getDescription()' >
+
+<div class="card mb-3">
+  <img class="card-img-top" src="{{dataDescription.image}}" alt="Card image cap" height=150px width= 100px >
+  <div class="card-block">
+    <h4 class="card-title">{{dataDescription.name}}</h4>
+    <p class="card-text">{{dataDescription.category}}</p>
+        <p class="card-text">{{dataDescription.memory}}</p>
+        <p class="card-text">{{dataDescription.screen}}</p>
+        <p class="card-text">{{dataDescription.camera}}</p>
+        <p class="card-text">{{dataDescription.proc}}</p>
+        <p class="card-text">{{dataDescription.battery}}</p>
+        <p class="card-text">{{dataDescription.os}}</p>
+    <p class="card-text"><small class="text-muted">{{dataDescription.cost}}</small></p>
+     <p class="card-text"><small class="text-muted"><input type="button" name="addToCart" ng-model='addButton' ng-click='addItem()' value='ADD TO CART' />
+</small></p>
+  </div>
+</div>
+</div> 
